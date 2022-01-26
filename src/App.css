@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: grid;
 }
 
 .App-logo {
@@ -22,6 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: absolute;
 }
 
 .App-link {
@@ -35,4 +37,88 @@
   to {
     transform: rotate(360deg);
   }
+}
+input[type=text] {
+  box-sizing: border-box;
+  border: 2px solid navy;
+  background-color: black;
+  color: white;
+  width: 40%;
+  position: relative;
+ 
+  
+}
+.select {
+  
+  position: relative;
+
+}
+.race {
+  box-sizing: border-box;
+  border: 2px solid navy;
+  background-color: black;
+  color: white;
+  width: 10%;
+}
+.attr {
+  font-size: 14px;
+  position: relative;
+  
+  
+  
+
+  
+}
+
+
+select {
+  box-sizing: border-box;
+  border: 2px solid navy;
+  background-color: black;
+  color: white;
+  width: 40%;
+}
+
+
+
+
+
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: black;
+}
+
+.right {
+  right: 0;
+  background-color: black;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+
+p {
+  font-size: large;
 }
