@@ -360,6 +360,21 @@ useEffect(() => {
         
         <div class="split left">
   <div class="centered">
+  <div class='attr'> 
+        
+      
+        <form>
+        <label>Level</label> <br/>
+        <input
+        
+        type="text"
+        value={levelValue}
+        onChange={(l) => setLevel(l.target.value)}
+        
+        />
+        </form>
+        
+        </div>
         <div class='attr'> 
         
        
@@ -457,21 +472,7 @@ useEffect(() => {
         
        
         
-        <div class='attr'> 
         
-      
-        <form>
-        <label>Level</label> <br/>
-        <input
-        
-        type="text"
-        value={levelValue}
-        onChange={(l) => setLevel(l.target.value)}
-        
-        />
-        </form>
-        
-        </div>
        
         
         <div class='attr'> 
