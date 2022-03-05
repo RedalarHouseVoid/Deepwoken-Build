@@ -40,7 +40,7 @@
 }
 input[type=text] {
   box-sizing: border-box;
-  border: 2px solid navy;
+  border: 1px solid rgb(23, 63, 26);
   background-color: black;
   color: white;
   width: 40%;
@@ -55,7 +55,7 @@ input[type=text] {
 }
 .race {
   box-sizing: border-box;
-  border: 2px solid navy;
+  border: 2px solid rgb(0, 0, 0);
   background-color: black;
   color: white;
   width: 10%;
@@ -63,6 +63,12 @@ input[type=text] {
 .attr {
   font-size: 14px;
   position: relative;
+  background-color: rgb(23, 63, 26);
+  border-radius: 5px;
+  border: rgb(23, 63, 26) 4px;
+  width: 250px;
+  margin-bottom: 20px;
+  
   
   
   
@@ -70,10 +76,18 @@ input[type=text] {
   
 }
 
+p {
+  font-size: large;
+  background-color: rgb(23, 63, 26);
+  border-radius: 5px;
+  border: rgb(23, 63, 26) 4px;
+  height: 45px;
+}
+
 
 select {
   box-sizing: border-box;
-  border: 2px solid navy;
+  border: 2px solid rgb(0, 0, 0);
   background-color: black;
   color: white;
   width: 40%;
@@ -93,12 +107,18 @@ select {
   top: 0;
   overflow-x: hidden;
   padding-top: 20px;
+  background-color: black;
+  
 }
-
+.middle {
+  color: white;
+}
 .left {
   left: 0;
   background-color: black;
 }
+
+
 
 .right {
   right: 0;
@@ -118,7 +138,3 @@ select {
   border-radius: 50%;
 }
 
-
-p {
-  font-size: large;
-}

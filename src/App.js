@@ -353,9 +353,10 @@ useEffect(() => {
 
     return (
     <div className="App">
+      
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-      
+        
         
         <div class="split left">
   <div class="centered">
@@ -396,6 +397,63 @@ useEffect(() => {
        
         
         </div>
+        <div class='attr'> 
+       
+
+
+        <form>
+        <label>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}</label> <br/>
+        <input
+        
+        type="text"
+        value={primaryAttunementValue}
+        onChange={(a) => attrChange(a, 'primary attunement')}
+        />
+       
+        </form>
+        <select
+         value={primaryAttunement}
+         onChange={
+           (A) => primaryAttunementChange(A)}
+           > 
+         
+         <option value="none" selected="selected">Attunement</option>
+          <option value='Flamecharm'>Flamecharm</option>
+          <option value='Frostdraw'>Frostdraw</option>
+          <option value='Thundercall'>Thundercall</option>
+          <option value='Galebreathe'>Galebreathe</option>
+          <option value='Shadowcast'>Shadowcast</option>
+        </select>
+        </div>
+        <div class='attr'> 
+       
+
+
+        <form>
+        <label>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}</label> <br/>
+        <input
+        
+        type="text"
+        value={secondaryAttunementValue}
+        onChange={(a) => attrChange(a, 'secondary attunement')}
+        />
+       
+        </form>
+        <select
+         value={secondaryAttunement}
+         onChange={
+           (A) => secondaryAttunementChange(A)}
+           > 
+        
+        <option value="none" selected="selected">Attunement</option>
+        <option value='Frostdraw'>Frostdraw</option>
+        <option value='Flamecharm'>Flamecharm</option>
+          <option value='Thundercall'>Thundercall</option>
+          <option value='Galebreathe'>Galebreathe</option>
+          <option value='Shadowcast'>Shadowcast</option>
+        </select>
+        </div>
+
         
        
         
@@ -526,61 +584,7 @@ useEffect(() => {
         </form>
         </div>
 
-        <div class='attr'> 
-       
-
-
-        <form>
-        <label>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}</label> <br/>
-        <input
         
-        type="text"
-        value={primaryAttunementValue}
-        onChange={(a) => attrChange(a, 'attunement')}
-        />
-        <select
-         value={primaryAttunement}
-         onChange={
-           (A) => primaryAttunementChange(A)}
-           > 
-         
-         <option value="none" selected="selected">Select an Attunement</option>
-          <option value='Flamecharm'>Flamecharm</option>
-          <option value='Frostdraw'>Frostdraw</option>
-          <option value='Thundercall'>Thundercall</option>
-          <option value='Galebreathe'>Galebreathe</option>
-          <option value='Shadowcast'>Shadowcast</option>
-        </select>
-        </form>
-        </div>
-        <div class='attr'> 
-       
-
-
-        <form>
-        <label>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}</label> <br/>
-        <input
-        
-        type="text"
-        value={secondaryAttunementValue}
-        onChange={(a) => attrChange(a, 'attunement')}
-        />
-        <select
-         value={secondaryAttunement}
-         onChange={
-           (A) => secondaryAttunementChange(A)}
-           > 
-        
-        <option value="none" selected="selected">Select an Attunement</option>
-        <option value='Frostdraw'>Frostdraw</option>
-        <option value='Flamecharm'>Flamecharm</option>
-          <option value='Thundercall'>Thundercall</option>
-          <option value='Galebreathe'>Galebreathe</option>
-          <option value='Shadowcast'>Shadowcast</option>
-        </select>
-        </form>
-        </div>
-
         <div class='attr'> 
         
         
@@ -628,10 +632,16 @@ useEffect(() => {
         <div>
       
         </div>
+        
         </div>
+        
 </div>
 
+
+
+
 <div class="split right">
+
   <div class="centered">
   <p>   Remaining Points {
             (levelValue * 5 + 25 ) - (Number(lightWeaponValue) + Number(mediumWeaponValue) + Number(heavyWeaponValue) + Number(primaryAttunementValue) + Number(secondaryAttunementValue) +  Number(charismaValue) + Number(intelligenceValue) + Number(willpowerValue) + Number(agilityValue) + Number(strengthValue) + Number(fortitudeValue))
@@ -649,21 +659,25 @@ useEffect(() => {
   <p>Medium Weapons: {mediumWeaponValue} </p>
   <p>Heavy Weapons: {heavyWeaponValue} </p>
   </div>
+
+
+  
 </div>
-         
+ 
 
         
-      
+
        
 
          
 
 
-     
+
 
       </header>
       
     </div>
+    
   );
 }
 
