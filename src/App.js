@@ -25,6 +25,43 @@ function App() {
 
   let prevRace;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const talents = {
+  'name': ['description', 'attribute req', 'attribute req', ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function clean() {
     setCharisma(1)
     setIntelligence(1)
@@ -396,7 +433,7 @@ useEffect(() => {
 
 
         
-        <div> 
+        <div class='coreAttributes'> 
         <div class='select attr'> 
         <form>
         <label>Race</label> <br/>
@@ -545,7 +582,7 @@ useEffect(() => {
 
 
 
-        <div> 
+        <div class='secondaryAttributes'> 
         <div class='attr'> 
         <form>
         <label>Level</label> <br/>

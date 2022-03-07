@@ -15,25 +15,49 @@
   margin-right: auto;
   margin-bottom: auto;
 }
+.coreAttributes {
+  width: 70%;
+  
+  
+}
+.secondaryAttributes{
+  width: 70%;
+  
+  margin-right: 50px;
+}
 body {
-  background-color: black;
-  color: white
+  background-color: rgb(58, 55, 55);
+  color: rgb(255, 255, 255)
 }
 input[type=text] {
   box-sizing: border-box;
   border: 1px solid rgb(23, 63, 26);
+  border-radius: 5px;
   background-color: black;
   color: white;
   width: 40%;
   position: relative;
- 
+  transition: ease-in-out, width .35s ease-in-out;
   
 }
+input[type=text]:focus {
+  width: 250px;
+}
+
+select {
+  box-sizing: border-box;
+  border: 1px solid rgb(23, 63, 26);
+  background-color: black;
+  color: white;
+  width: 60%;
+  
+}
+
 
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  
+  width: 100%;
   
 
 }
@@ -48,38 +72,41 @@ input[type=text] {
 }
 .MainInputs {
   display: grid;
-  grid-template-columns: 1fr 1fr
+  grid-template-columns: 1fr 1fr;
+  
 }
 .points {
   width: 70%;
 }
 .Input {
-  width: 70%;
+  width: 80%;
   
   
 }
 
-select {
-  box-sizing: border-box;
-  border: 1px solid rgb(23, 63, 26);
-  background-color: black;
-  color: white;
-  width: 60%;
-}
+
 
 
 
 .attr {
-  font-size: 14px;
-  
-  background-color: rgb(23, 63, 26);
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 5px;
+  border: black 1px solid;
   border-radius: 5px;
-  border: rgb(23, 63, 26) 4px;
-  width: 250px;
-  margin-bottom: 20px;
- 
   text-align: center;
+  background-color: rgb(23, 63, 26);
+  margin: 5px;
+  height: auto;
+
  
+}
+.attr:hover {
+
+  box-shadow: 2px white;
+  
+}
+:hover {
+  border-color: white;
 }
 .AttunementDisplay {
   
@@ -91,10 +118,12 @@ select {
 
 
 p {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;
+  border: black 1px solid;
   border-radius: 5px;
   text-align: center;
   background-color: rgb(23, 63, 26);
   margin: 5px;
+  height: auto;
 }
