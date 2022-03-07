@@ -1,42 +1,8 @@
-.App {
-  text-align: center;
-  display: grid;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  position: absolute;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  background-color: black;
+  color: white
 }
 input[type=text] {
   box-sizing: border-box;
@@ -48,18 +14,34 @@ input[type=text] {
  
   
 }
-.select {
-  
-  position: relative;
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-content: center;
+  justify-content: center;
 
 }
-.race {
+.Display {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
+
+}
+.col {
+  align-items: ;
+  width: 33%;
+}
+select {
   box-sizing: border-box;
-  border: 2px solid rgb(0, 0, 0);
+  border: 1px solid rgb(23, 63, 26);
   background-color: black;
   color: white;
-  width: 10%;
+  width: 60%;
 }
+
+
+
 .attr {
   font-size: 14px;
   position: relative;
@@ -68,71 +50,19 @@ input[type=text] {
   border: rgb(23, 63, 26) 4px;
   width: 250px;
   margin-bottom: 20px;
-  
-  
-  
-  
-
-  
+ 
 }
+.AttunementDisplay {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 
 
+}
 p {
-  font-size: large;
-  background-color: rgb(23, 63, 26);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
   border-radius: 5px;
-  border: rgb(23, 63, 26) 4px;
-  height: 45px;
-}
-
-
-select {
-  box-sizing: border-box;
-  border: 2px solid rgb(0, 0, 0);
-  background-color: black;
-  color: white;
-  width: 40%;
-}
-
-
-
-
-
-
-
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
-  background-color: black;
-  
-}
-
-.left {
-  left: 0;
-  background-color: black;
-}
-
-
-
-.right {
-  right: 0;
-  background-color: black;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
+  background-color: rgb(23, 63, 26);
+  margin: 5px;
 }
-
-.centered img {
-  width: 150px;
-  border-radius: 50%;
-}
-
