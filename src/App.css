@@ -1,5 +1,20 @@
 
+.points {
 
+ 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  
+}
+.Input {
+ 
+  
+  
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
 body {
   background-color: black;
   color: white
@@ -17,9 +32,9 @@ input[type=text] {
 
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-content: center;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  
+  
 
 }
 .Display {
@@ -29,13 +44,21 @@ input[type=text] {
 
 }
 .col {
-
-  width: 33%;
+  width: 50%;
 }
 .MainInputs {
   display: grid;
   grid-template-columns: 1fr 1fr
 }
+.points {
+  width: 70%;
+}
+.Input {
+  width: 70%;
+  
+  
+}
+
 select {
   box-sizing: border-box;
   border: 1px solid rgb(23, 63, 26);
@@ -48,13 +71,14 @@ select {
 
 .attr {
   font-size: 14px;
-  position: relative;
+  
   background-color: rgb(23, 63, 26);
   border-radius: 5px;
   border: rgb(23, 63, 26) 4px;
   width: 250px;
   margin-bottom: 20px;
-  margin-left: 10px;
+ 
+  text-align: center;
  
 }
 .AttunementDisplay {
@@ -64,9 +88,7 @@ select {
   grid-template-columns: 1fr 1fr 1fr
 
 }
-.points {
-  width: 80%;
-}
+
 
 p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */

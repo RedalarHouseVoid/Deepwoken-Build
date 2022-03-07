@@ -377,21 +377,21 @@ useEffect(() => {
  }, [raceValue, prevRace]);
 
 
-    return (
+   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ return (
     <div className="App">
       <div class='main'> 
 
       <div class='col Input'>
-
-
-
-        
-  
-        
-       
-         
-       
-        
+      
 <div class='MainInputs'> 
 
 
@@ -707,12 +707,10 @@ useEffect(() => {
        
         </div>
 
-      <div class='col Talents'>
-        Talents 
-       </div>
+      
 
       <div class='col points'>
-      <p>   Remaining Points {
+      <p>   Remaining Points: {
             (levelValue * 5 + 25 )
              - (Number(lightWeaponValue)
               + Number(mediumWeaponValue)
