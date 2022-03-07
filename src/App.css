@@ -29,8 +29,12 @@ input[type=text] {
 
 }
 .col {
-  align-items: ;
+
   width: 33%;
+}
+.MainInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr
 }
 select {
   box-sizing: border-box;
@@ -50,14 +54,20 @@ select {
   border: rgb(23, 63, 26) 4px;
   width: 250px;
   margin-bottom: 20px;
+  margin-left: 10px;
  
 }
 .AttunementDisplay {
   
   display: grid;
-  grid-template-columns: 1fr 1fr 
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr
 
 }
+.points {
+  width: 80%;
+}
+
 p {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 16px;

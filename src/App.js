@@ -20,6 +20,8 @@ function App() {
   const [primaryAttunement, setPrimaryAttunementName] = useState('none');
   const [secondaryAttunement, setSecondaryAttunementName] = useState('none');
   const [secondaryAttunementValue, setSecondaryAttunement] = useState(0);
+  const [tertiaryAttunementValue, setTertiaryAttunement] = useState(0);
+  const [tertiaryAttunement, setTertiaryAttunementName] = useState('none');
 
   let prevRace;
 
@@ -160,6 +162,21 @@ function secondaryAttunementChange(A) {
   
   
 }
+function tertiaryAttunementChange(A) {
+  
+ 
+  setTertiaryAttunementName(A.target.value);
+
+  
+  
+  
+  
+  
+  
+  
+  
+}
+
 
 function blur(a, attr) {
   
@@ -300,6 +317,15 @@ function attrChange(a, attr) {
         
         }
         break;
+        case 'tertiary attunement':
+          if(a.target.value.match(numRegex)){
+           
+              setTertiaryAttunement(a.target.value)
+            
+          
+          
+          }
+          break;
       case 'light weapon':
       if(a.target.value.match(numRegex)){
      
@@ -356,14 +382,22 @@ useEffect(() => {
       <div class='main'> 
 
       <div class='col Input'>
-      <div class='attr'> 
+
+
+
+        
+  
         
        
          
        
         
+<div class='MainInputs'> 
 
-        <div class='select' class='attr'> 
+
+        
+        <div> 
+        <div class='select attr'> 
         <form>
         <label>Race</label> <br/>
         <select class='Race'
@@ -387,32 +421,6 @@ useEffect(() => {
         </select>
         </form>
         </div>
-    
-
-        
-       
-        
-        </div>
-        
-       
-        
-        <div class='attr'> 
-        
-      
-        <form>
-        <label>Level</label> <br/>
-        <input
-        
-        type="text"
-        value={levelValue}
-        onChange={(l) => setLevel(l.target.value)}
-        
-        />
-        </form>
-        
-        </div>
-       
-        
         <div class='attr'> 
         
          
@@ -521,112 +529,189 @@ useEffect(() => {
         onBlur={(a) => blur(a, 'fortitude')}
         />
         </form>
+
         </div>
 
-        <div class='attr'> 
+        </div>
+    
+
+        
        
+        
+    
+        
+       
+        
 
 
+
+        <div> 
+        <div class='attr'> 
         <form>
-        <label>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}</label> <br/>
+        <label>Level</label> <br/>
         <input
         
         type="text"
-        value={primaryAttunementValue}
-        onChange={(a) => attrChange(a, 'primary attunement')}
+        value={levelValue}
+        onChange={(l) => setLevel(l.target.value)}
+        
         />
-        <select
-         value={primaryAttunement}
-         onChange={
-           (A) => primaryAttunementChange(A)}
-           > 
-         
-         <option value="none" selected="selected">Select Attunement</option>
-          <option value='Flamecharm'>Flamecharm</option>
-          <option value='Frostdraw'>Frostdraw</option>
-          <option value='Thundercall'>Thundercall</option>
-          <option value='Galebreathe'>Galebreathe</option>
-          <option value='Shadowcast'>Shadowcast</option>
-        </select>
         </form>
         </div>
         <div class='attr'> 
        
 
 
-        <form>
-        <label>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}</label> <br/>
-        <input
-        
-        type="text"
-        value={secondaryAttunementValue}
-        onChange={(a) => attrChange(a, 'secondary attunement')}
-        />
-        <select
-         value={secondaryAttunement}
-         onChange={
-           (A) => secondaryAttunementChange(A)}
-           > 
+       <form>
+       <label>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}</label> <br/>
+       <input
+       
+       type="text"
+       value={primaryAttunementValue}
+       onChange={(a) => attrChange(a, 'primary attunement')}
+       />
+       <select
+        value={primaryAttunement}
+        onChange={
+          (A) => primaryAttunementChange(A)}
+          > 
         
         <option value="none" selected="selected">Select Attunement</option>
-        <option value='Frostdraw'>Frostdraw</option>
-        <option value='Flamecharm'>Flamecharm</option>
-          <option value='Thundercall'>Thundercall</option>
-          <option value='Galebreathe'>Galebreathe</option>
-          <option value='Shadowcast'>Shadowcast</option>
-        </select>
-        </form>
+         <option value='Flamecharm'>Flamecharm</option>
+         <option value='Frostdraw'>Frostdraw</option>
+         <option value='Thundercall'>Thundercall</option>
+         <option value='Galebreathe'>Galebreathe</option>
+         <option value='Shadowcast'>Shadowcast</option>
+       </select>
+       </form>
+       </div>
+       <div class='attr'> 
+      
+
+
+       <form>
+       <label>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}</label> <br/>
+       <input
+       
+       type="text"
+       value={secondaryAttunementValue}
+       onChange={(a) => attrChange(a, 'secondary attunement')}
+       />
+       <select
+        value={secondaryAttunement}
+        onChange={
+          (A) => secondaryAttunementChange(A)}
+          > 
+       
+       <option value="none" selected="selected">Select Attunement</option>
+       <option value='Frostdraw'>Frostdraw</option>
+       <option value='Flamecharm'>Flamecharm</option>
+         <option value='Thundercall'>Thundercall</option>
+         <option value='Galebreathe'>Galebreathe</option>
+         <option value='Shadowcast'>Shadowcast</option>
+       </select>
+       </form>
+       </div>
+       <div class='attr'> 
+      
+
+
+       <form>
+       <label>{tertiaryAttunement !== 'none' ? tertiaryAttunement : 'Tertiary Attunement'}</label> <br/>
+       <input
+       
+       type="text"
+       value={tertiaryAttunementValue}
+       onChange={(a) => attrChange(a, 'tertiary attunement')}
+       />
+       <select
+        value={tertiaryAttunement}
+        onChange={
+          (A) => tertiaryAttunementChange(A)}
+          > 
+       
+       <option value="none" selected="selected">Select Attunement</option>
+       <option value='Frostdraw'>Frostdraw</option>
+       <option value='Flamecharm'>Flamecharm</option>
+         <option value='Thundercall'>Thundercall</option>
+         <option value='Galebreathe'>Galebreathe</option>
+         <option value='Shadowcast'>Shadowcast</option>
+       </select>
+       </form>
+       </div>
+
+       <div class='attr'> 
+       
+       
+       <form>
+       <label>Light Weapons</label> <br/> 
+       <input
+       
+       type="text"
+       value={lightWeaponValue}
+       onChange={(a) => attrChange(a, 'light weapon')}
+       />
+       </form>
+       
+       </div>
+       <div class='attr'> 
+       
+       
+       <form>
+       <label>Medium Weapons</label> <br/> 
+       <input
+       
+       type="text"
+       value={mediumWeaponValue}
+       onChange={(a) => attrChange(a, 'medium weapon')}
+       />
+       </form>
+       
+       </div>
+       <div class='attr'> 
+       
+       
+       <form>
+       <label>Heavy Weapons</label> <br/> 
+       <input
+       
+       type="text"
+       value={heavyWeaponValue}
+       onChange={(a) => attrChange(a, 'heavy weapon')}
+       />
+       </form>
+       
+       </div>
+        
+        
         </div>
 
-        <div class='attr'> 
-        
-        
-        <form>
-        <label>Light Weapons</label> <br/> 
-        <input
-        
-        type="text"
-        value={lightWeaponValue}
-        onChange={(a) => attrChange(a, 'light weapon')}
-        />
-        </form>
-        
+
+
+
         </div>
-        <div class='attr'> 
+       
         
         
-        <form>
-        <label>Medium Weapons</label> <br/> 
-        <input
-        
-        type="text"
-        value={mediumWeaponValue}
-        onChange={(a) => attrChange(a, 'medium weapon')}
-        />
-        </form>
-        
-        </div>
-        <div class='attr'> 
-        
-        
-        <form>
-        <label>Heavy Weapons</label> <br/> 
-        <input
-        
-        type="text"
-        value={heavyWeaponValue}
-        onChange={(a) => attrChange(a, 'heavy weapon')}
-        />
-        </form>
-        
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+       
         </div>
 
       <div class='col Talents'>
         Talents 
        </div>
 
-      <div class='col'>
+      <div class='col points'>
       <p>   Remaining Points {
             (levelValue * 5 + 25 )
              - (Number(lightWeaponValue)
@@ -634,12 +719,13 @@ useEffect(() => {
                + Number(heavyWeaponValue)
                 + Number(primaryAttunementValue)
                  + Number(secondaryAttunementValue)
-                  +  Number(charismaValue)
-                   + Number(intelligenceValue)
-                    + Number(willpowerValue)
-                     + Number(agilityValue)
-                      + Number(strengthValue)
-                       + Number(fortitudeValue))
+                  + Number(tertiaryAttunementValue)
+                   +  Number(charismaValue)
+                    + Number(intelligenceValue)
+                     + Number(willpowerValue)
+                      + Number(agilityValue)
+                       + Number(strengthValue)
+                        + Number(fortitudeValue))
         }
   </p>
         <div class='Display'>
@@ -657,8 +743,9 @@ useEffect(() => {
            </div>
 
            <div class='AttunementDisplay'>
-           <p>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}: {primaryAttunementValue} </p>
-           <p>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}: {secondaryAttunementValue} </p>
+           <p class='AttunementDisplayItem'>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}: {primaryAttunementValue} </p>
+           <p class='AttunementDisplayItem'>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}: {secondaryAttunementValue} </p>
+           <p class='AttunementDisplayItem'>{tertiaryAttunement !== 'none' ? tertiaryAttunement : 'Tertiary Attunement'}: {tertiaryAttunementValue} </p>
            </div>
 
 
