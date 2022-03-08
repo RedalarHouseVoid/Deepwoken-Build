@@ -1,29 +1,15 @@
 
-.points {
 
- 
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-  
-}
-.Input {
- 
-  
-  
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
-}
 .coreAttributes {
-  width: 70%;
+  width: 100%;
+  
   
   
 }
 .secondaryAttributes{
-  width: 70%;
+  width: 100%;
   
-  margin-right: 50px;
+  
 }
 body {
   background-color: rgb(58, 55, 55);
@@ -52,8 +38,22 @@ select {
   width: 60%;
   
 }
+select:hover {
+  border-color: black;
+}
 
 
+.Top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  height: 100%
+
+}
+
+.talents {
+  margin: auto;
+}
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,11 +64,12 @@ select {
 .Display {
   
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr;
+  
 
 }
 .col {
-  width: 50%;
+  width: 33%;
 }
 .MainInputs {
   display: grid;
@@ -76,10 +77,10 @@ select {
   
 }
 .points {
-  width: 70%;
+  width: 100%;
 }
 .Input {
-  width: 80%;
+  width: 100%;
   
   
 }
@@ -108,14 +109,19 @@ select {
 :hover {
   border-color: white;
 }
+
 .AttunementDisplay {
   
   display: grid;
   width: 100%;
+  height: 20%;
   grid-template-columns: 1fr 1fr 1fr
 
 }
-
+.DisplayItem {
+  margin-top: 25px;
+  height: 41%;
+}
 
 p {
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */

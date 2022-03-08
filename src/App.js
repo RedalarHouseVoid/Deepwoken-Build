@@ -24,6 +24,7 @@ function App() {
   const [tertiaryAttunement, setTertiaryAttunementName] = useState('none');
 
   let prevRace;
+  const talents = []
 
 
 
@@ -45,9 +46,6 @@ function App() {
 
 
 
-const talents = {
-  'name': ['description', 'attribute req', 'attribute req', ]
-}
 
 
 
@@ -425,7 +423,8 @@ useEffect(() => {
  
  return (
     <div className="App">
-      <div class='main'> 
+      <div class='Top'> 
+      
 
       <div class='col Input'>
       
@@ -624,8 +623,6 @@ useEffect(() => {
        </div>
        <div class='attr'> 
       
-
-
        <form>
        <label>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}</label> <br/>
        <input
@@ -649,6 +646,9 @@ useEffect(() => {
        </select>
        </form>
        </div>
+
+
+
        <div class='attr'> 
       
 
@@ -743,7 +743,11 @@ useEffect(() => {
 
        
         </div>
+            <div class='col talents'>
 
+test
+
+            </div>
       
 
       <div class='col points'>
@@ -764,23 +768,23 @@ useEffect(() => {
         }
   </p>
         <div class='Display'>
-        <p>Charisma:     {charismaValue} </p>
-  <p>Intelligence:    {intelligenceValue} </p>
-  <p>Willpower: {willpowerValue} </p>
-  <p>Strength: {strengthValue} </p>
-  <p>Agility: {agilityValue} </p>
-  <p>Fortitude:   {fortitudeValue} </p>
-  <p>Light Weapons:     {lightWeaponValue} </p>
-  <p>Medium Weapons:   {mediumWeaponValue} </p>
-  <p>Heavy Weapons:   {heavyWeaponValue} </p>
+  <p class='DisplayItem'>Charisma:     {charismaValue} </p>
+  <p class='DisplayItem'>Intelligence:    {intelligenceValue} </p>
+  <p class='DisplayItem'>Willpower: {willpowerValue} </p>
+  <p class='DisplayItem'>Strength: {strengthValue} </p>
+  <p class='DisplayItem'>Agility: {agilityValue} </p>
+  <p class='DisplayItem'>Fortitude:   {fortitudeValue} </p>
+  <p class='DisplayItem'>Light Weapons:     {lightWeaponValue} </p>
+  <p class='DisplayItem'>Medium Weapons:   {mediumWeaponValue} </p>
+  <p class='DisplayItem'> Heavy Weapons:   {heavyWeaponValue} </p>
 
 
            </div>
 
            <div class='AttunementDisplay'>
-           <p class='AttunementDisplayItem'>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}: {primaryAttunementValue} </p>
-           <p class='AttunementDisplayItem'>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}: {secondaryAttunementValue} </p>
-           <p class='AttunementDisplayItem'>{tertiaryAttunement !== 'none' ? tertiaryAttunement : 'Tertiary Attunement'}: {tertiaryAttunementValue} </p>
+           <p class='DisplayItem'>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}: {primaryAttunementValue} </p>
+           <p class='DisplayItem'>{secondaryAttunement !== 'none' ? secondaryAttunement : 'Secondary Attunement'}: {secondaryAttunementValue} </p>
+           <p class='DisplayItem'>{tertiaryAttunement !== 'none' ? tertiaryAttunement : 'Tertiary Attunement'}: {tertiaryAttunementValue} </p>
            </div>
 
 
@@ -792,6 +796,9 @@ useEffect(() => {
   
   
       </div>
+
+
+
      
   
     </div>
