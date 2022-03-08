@@ -1,6 +1,19 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React, { useState, useEffect } from 'react';
+import {agilityObj,
+   charismaObj,
+    fortitudeObj,
+     willpowerObj,
+      intelligenceObj,
+       strengthObj,
+        requestTalents,
+         eligibleCharisma,
+          eligibleAgility,
+            eligibleFortitude,
+              eligibleWillpower,
+                eligibleIntelligence,
+                  eligibleStrength} from './talents.js';
 
 let attrLocks = {charisma: false, intelligence: false, willpower: false, strength: false, agility: false, fortitude: false };
 
@@ -24,7 +37,92 @@ function App() {
   const [tertiaryAttunement, setTertiaryAttunementName] = useState('none');
 
   let prevRace;
-  const talents = []
+  //const talents = requestTalents(agilityValue, charismaValue, fortitudeValue, willpowerValue, intelligenceValue, strengthValue);
+
+
+  let displayTalents;
+  const Talents = () => {
+    
+    
+    
+    displayTalents = []
+    
+    
+    
+    requestTalents(agilityValue, charismaValue, fortitudeValue, willpowerValue, intelligenceValue, strengthValue);
+    
+    for(let i = 0; i < eligibleCharisma.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleCharisma[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+
+    for(let i = 0; i < eligibleAgility.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleAgility[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleAgility[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+    for(let i = 0; i < eligibleFortitude.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleFortitude[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleFortitude[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+    for(let i = 0; i < eligibleWillpower.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleWillpower[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleWillpower[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+    for(let i = 0; i < eligibleIntelligence.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleIntelligence[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleIntelligence[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+    for(let i = 0; i < eligibleStrength.length; i++) {
+      
+      let cardText = []
+      for(let k = 0; k < eligibleStrength[i].length; k++) {
+        
+        cardText.push(<h5 class='TalentItem'>{eligibleStrength[i][k]}</h5>)
+      }
+      
+      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+  
+    }
+    return displayTalents
+  }
+  
+
+
 
 
 
@@ -285,6 +383,7 @@ function attrChange(a, attr) {
         
           setCharisma(a.target.value)
         
+        
       
       
       }
@@ -391,7 +490,7 @@ function attrChange(a, attr) {
     default:
       break;
   }
-  
+  Talents()
 }
 
 useEffect(() => {
@@ -401,7 +500,7 @@ useEffect(() => {
      
   }
   
-
+  
  
  
   
@@ -743,9 +842,11 @@ useEffect(() => {
 
        
         </div>
-            <div class='col talents'>
-
-test
+            <div class='col'>
+            <div class='talents'>
+            {Talents()}
+            </div> 
+       
 
             </div>
       

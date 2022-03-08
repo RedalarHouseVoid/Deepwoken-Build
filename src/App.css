@@ -51,15 +51,17 @@ select:hover {
 
 }
 
-.talents {
-  margin: auto;
-}
+
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100%;
   
 
+}
+.talents {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .Display {
   
@@ -114,22 +116,30 @@ select:hover {
   
   display: grid;
   width: 100%;
-  height: 20%;
+  
   grid-template-columns: 1fr 1fr 1fr
 
 }
 .DisplayItem {
-  margin-top: 25px;
+  margin-top: 4px;
   height: 41%;
 }
-
+.TalentItem {
+margin: 5px;
+}
+.TalentContainer {
+  background-color: rgb(23, 63, 26);
+  border-radius: 7px;
+  border: rgb(0, 0, 0) 2px solid;
+  margin: 5px;
+}
 p {
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
-  padding: 16px;
+  padding: 12px;
   border: black 1px solid;
   border-radius: 5px;
   text-align: center;
   background-color: rgb(23, 63, 26);
-  margin: 5px;
-  height: auto;
+  
+  
 }
