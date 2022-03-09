@@ -59,7 +59,7 @@ function App() {
       let cardText = []
       for(let k = 0; k < eligibleCharisma[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i]}</h5>)
+        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i][k]}</h5>)
       }
       
       displayTalents.push(<div class='TalentContainer' onClick={alert} >{cardText} </div>)
