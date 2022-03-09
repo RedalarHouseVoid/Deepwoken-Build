@@ -20,12 +20,12 @@ let attrLocks = {charisma: false, intelligence: false, willpower: false, strengt
 function App() {
   const [levelValue, setLevel] = useState(1);
   const [raceValue, setRace] = useState('Celtor');
-  const [charismaValue, setCharisma] = useState(1);
-  const [intelligenceValue, setIntelligence] = useState(1);
-  const [willpowerValue, setWillpower] = useState(1);
-  const [agilityValue, setAgility] = useState(1);
-  const [strengthValue, setStrength] = useState(1);
-  const [fortitudeValue, setFortitude] = useState(1);
+  const [charismaValue, setCharisma] = useState(0);
+  const [intelligenceValue, setIntelligence] = useState(0);
+  const [willpowerValue, setWillpower] = useState(0);
+  const [agilityValue, setAgility] = useState(0);
+  const [strengthValue, setStrength] = useState(0);
+  const [fortitudeValue, setFortitude] = useState(0);
   const [lightWeaponValue, setLightWeapon] = useState(0);
   const [mediumWeaponValue, setMediumWeapon] = useState(0);
   const [heavyWeaponValue, setHeavyWeapon] = useState(0);
@@ -128,12 +128,12 @@ function App() {
   }
  
 function clean() {
-    setCharisma(1)
-    setIntelligence(1)
-    setWillpower(1)
-    setAgility(1)
-    setStrength(1)
-    setFortitude(1)
+    setCharisma(0)
+    setIntelligence(0)
+    setWillpower(0)
+    setAgility(0)
+    setStrength(0)
+    setFortitude(0)
     attrLocks = {charisma: false, intelligence: false, willpower: false, strength: false, agility: false, fortitude: false }
 }
 function controlSetRace() {
@@ -348,7 +348,19 @@ function attrChange(a, attr) {
   const numRegex = '^[0-9]*$'
   switch (attr) {
     case 'charisma':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(a.target.value)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100){
         
           setCharisma(a.target.value)
         
@@ -358,7 +370,19 @@ function attrChange(a, attr) {
       }
       break;
     case 'intelligence':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(a.target.value)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100){
       
           setIntelligence(a.target.value)
         
@@ -367,7 +391,19 @@ function attrChange(a, attr) {
       }
       break;
     case 'willpower':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(a.target.value)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100){
        
           setWillpower(a.target.value)
         
@@ -376,7 +412,19 @@ function attrChange(a, attr) {
       }
       break;
     case 'strength':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(a.target.value)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100){
      
           setStrength(a.target.value)
         
@@ -385,7 +433,19 @@ function attrChange(a, attr) {
       }
       break;
     case 'agility':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(a.target.value)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100){
         
           setAgility(a.target.value)
         
@@ -394,7 +454,19 @@ function attrChange(a, attr) {
       }
       break;
     case 'fortitude':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex) && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(a.target.value)) > -1  && a.target.value <= 100){
       
           setFortitude(a.target.value)
         
@@ -403,7 +475,19 @@ function attrChange(a, attr) {
       }
       break;
       case 'primary attunement':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex) && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(a.target.value)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1 && levelValue !== 1  && a.target.value <= 100){
        
           setPrimaryAttunement(a.target.value)
         
@@ -412,7 +496,19 @@ function attrChange(a, attr) {
       }
       break;
       case 'secondary attunement':
-        if(a.target.value.match(numRegex)){
+        if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+        - (Number(lightWeaponValue)
+         + Number(mediumWeaponValue)
+          + Number(heavyWeaponValue)
+           + Number(primaryAttunementValue)
+            + Number(a.target.value)
+             + Number(tertiaryAttunementValue)
+              +  Number(charismaValue)
+               + Number(intelligenceValue)
+                + Number(willpowerValue)
+                 + Number(agilityValue)
+                  + Number(strengthValue)
+                   + Number(fortitudeValue)) > -1  && a.target.value <= 100){
          
             setSecondaryAttunement(a.target.value)
           
@@ -421,7 +517,19 @@ function attrChange(a, attr) {
         }
         break;
         case 'tertiary attunement':
-          if(a.target.value.match(numRegex)){
+          if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+          - (Number(lightWeaponValue)
+           + Number(mediumWeaponValue)
+            + Number(heavyWeaponValue)
+             + Number(primaryAttunementValue)
+              + Number(secondaryAttunementValue)
+               + Number(a.target.value)
+                +  Number(charismaValue)
+                 + Number(intelligenceValue)
+                  + Number(willpowerValue)
+                   + Number(agilityValue)
+                    + Number(strengthValue)
+                     + Number(fortitudeValue)) > -1  && a.target.value <= 100){
            
               setTertiaryAttunement(a.target.value)
             
@@ -430,7 +538,19 @@ function attrChange(a, attr) {
           }
           break;
       case 'light weapon':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      - (Number(a.target.value)
+       + Number(mediumWeaponValue)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100 && levelValue !== 1){
      
           setLightWeapon(a.target.value)
         
@@ -439,7 +559,19 @@ function attrChange(a, attr) {
       }
       break;
       case 'medium weapon':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(a.target.value)
+        + Number(heavyWeaponValue)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100  && levelValue !== 1){
      
           setMediumWeapon(a.target.value)
         
@@ -448,7 +580,19 @@ function attrChange(a, attr) {
       }
       break;
       case 'heavy weapon':
-      if(a.target.value.match(numRegex)){
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      - (Number(lightWeaponValue)
+       + Number(mediumWeaponValue)
+        + Number(a.target.value)
+         + Number(primaryAttunementValue)
+          + Number(secondaryAttunementValue)
+           + Number(tertiaryAttunementValue)
+            +  Number(charismaValue)
+             + Number(intelligenceValue)
+              + Number(willpowerValue)
+               + Number(agilityValue)
+                + Number(strengthValue)
+                 + Number(fortitudeValue)) > -1  && a.target.value <= 100  && levelValue !== 1){
      
           setHeavyWeapon(a.target.value)
         
@@ -657,7 +801,7 @@ useEffect(() => {
         
         type="text"
         value={levelValue}
-        onChange={(l) => setLevel(l.target.value)}
+        onChange={(l) => {if(l.target.value <= 60){setLevel(l.target.value)}} }
         
         />
         </form>
