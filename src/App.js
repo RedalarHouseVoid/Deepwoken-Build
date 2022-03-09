@@ -120,44 +120,7 @@ function App() {
     }
     return displayTalents
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 function clean() {
     setCharisma(1)
     setIntelligence(1)
@@ -821,37 +784,10 @@ useEffect(() => {
         
         
         </div>
-
-
-
-
         </div>
-       
-        
-        
 
 
-
-
-
-
-
-
-
-
-
-       
-        </div>
-            <div class='col'>
-            <div class='talents'>
-            {Talents()}
-            </div> 
-       
-
-            </div>
-      
-
-      <div class='col points'>
+        <div class='points'>
       <p>   Remaining Points: {
             (levelValue * 5 + 25 )
              - (Number(lightWeaponValue)
@@ -893,6 +829,33 @@ useEffect(() => {
 
 
       </div>
+        
+       
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+       
+        </div>
+            <div class='col'>
+            <div class='Talents'>
+            {Talents()}
+            </div> 
+       
+
+            </div>
+      
+
+    
   
   
   

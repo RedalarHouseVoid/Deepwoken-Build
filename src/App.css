@@ -1,10 +1,13 @@
 
-
+@font-face {font-family: "MikadanW00-Regular"; src: url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.eot"); src: url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.woff") format("woff"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.svg#MikadanW00-Regular") format("svg"); }
 .coreAttributes {
   width: 100%;
   
   
   
+}
+html * {
+  font-family: "MikadanW00-Regular"
 }
 .secondaryAttributes{
   width: 100%;
@@ -24,9 +27,10 @@ input[type=text] {
   width: 40%;
   position: relative;
   transition: ease-in-out, width .35s ease-in-out;
-  
+  margin-top: 5px;
 }
 input[type=text]:focus {
+ 
   width: 250px;
 }
 
@@ -45,23 +49,21 @@ select:hover {
 
 .Top {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   width: 100%;
-  height: 100%
-
-}
-
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+  height: 100%;
   
 
 }
-.talents {
+
+
+.Talents {
+  margin: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  height: 56.0%;
+  overflow-y:scroll;
+  
 }
 .Display {
   
@@ -70,9 +72,7 @@ select:hover {
   
 
 }
-.col {
-  width: 33%;
-}
+
 .MainInputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -98,8 +98,11 @@ select:hover {
   border-radius: 5px;
   text-align: center;
   background-color: rgb(23, 63, 26);
-  margin: 5px;
-  height: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+ 
+
 
  
 }
@@ -121,17 +124,23 @@ select:hover {
 
 }
 .DisplayItem {
-  margin-top: 4px;
-  height: 41%;
+  margin: 10px;
+  height: 55%;
 }
 .TalentItem {
 margin: 5px;
+
+
 }
 .TalentContainer {
   background-color: rgb(23, 63, 26);
   border-radius: 7px;
   border: rgb(0, 0, 0) 2px solid;
-  margin: 5px;
+  margin:2px;
+  width: 93%;
+}
+.TalentContainer:hover {
+  border-color: white;
 }
 p {
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
