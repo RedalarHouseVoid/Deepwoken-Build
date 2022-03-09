@@ -68,13 +68,13 @@ select:hover {
   
 }
 .TalentItem {
-  margin: 5px;
-  height: 10%;
+
   font-size: 1vb;
-  
+  margin-left: 5px;
   
   
   }
+ 
   .TalentContainer {
     background-color: rgb(23, 63, 26);
     border-radius: 7px;
@@ -82,7 +82,7 @@ select:hover {
     margin:2px;
     width: auto;
     scroll-snap-align: end;
-
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   }
   .TalentContainer:hover {
     border-color: white;

@@ -71,8 +71,10 @@ function App() {
       let cardText = []
       
       for(let k = 0; k < eligibleAgility[i].length; k++) {
-     
-        cardText.push(<h5 class='TalentItem'>{eligibleAgility[i][k]}</h5>)
+       
+          cardText.push(<h5 class='TalentItem'>{eligibleAgility[i][k]}</h5>)
+        
+        
       }
       
       displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
