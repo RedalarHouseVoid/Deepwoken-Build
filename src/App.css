@@ -61,13 +61,17 @@ select:hover {
   margin: 5px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 37.3%;
+  height: 84vh; 
   overflow-y:scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  
 }
 .TalentItem {
   margin: 5px;
+  height: 10%;
+  font-size: 1vb;
+  
   
   
   }
@@ -76,8 +80,9 @@ select:hover {
     border-radius: 7px;
     border: rgb(0, 0, 0) 2px solid;
     margin:2px;
-    width: 93%;
+    width: auto;
     scroll-snap-align: end;
+
   }
   .TalentContainer:hover {
     border-color: white;

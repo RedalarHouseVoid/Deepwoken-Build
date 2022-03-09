@@ -41,6 +41,9 @@ function App() {
 
 
   let displayTalents;
+  const alert = () => {
+    window.alert('hey')
+  }
   const Talents = () => {
     
     
@@ -56,18 +59,19 @@ function App() {
       let cardText = []
       for(let k = 0; k < eligibleCharisma[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i][k]}</h5>)
+        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i]}</h5>)
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+      displayTalents.push(<div class='TalentContainer' onClick={alert} >{cardText} </div>)
   
     }
 
     for(let i = 0; i < eligibleAgility.length; i++) {
       
       let cardText = []
+      
       for(let k = 0; k < eligibleAgility[i].length; k++) {
-        
+     
         cardText.push(<h5 class='TalentItem'>{eligibleAgility[i][k]}</h5>)
       }
       
