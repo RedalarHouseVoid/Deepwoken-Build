@@ -60,11 +60,28 @@ select:hover {
 .Talents {
   margin: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  height: 56.0%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  height: 37.3%;
   overflow-y:scroll;
-  
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
+.TalentItem {
+  margin: 5px;
+  
+  
+  }
+  .TalentContainer {
+    background-color: rgb(23, 63, 26);
+    border-radius: 7px;
+    border: rgb(0, 0, 0) 2px solid;
+    margin:2px;
+    width: 93%;
+    scroll-snap-align: end;
+  }
+  .TalentContainer:hover {
+    border-color: white;
+  }
 .Display {
   
   display: grid;
@@ -127,21 +144,7 @@ select:hover {
   margin: 10px;
   height: 55%;
 }
-.TalentItem {
-margin: 5px;
 
-
-}
-.TalentContainer {
-  background-color: rgb(23, 63, 26);
-  border-radius: 7px;
-  border: rgb(0, 0, 0) 2px solid;
-  margin:2px;
-  width: 93%;
-}
-.TalentContainer:hover {
-  border-color: white;
-}
 p {
   box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
   padding: 12px;
