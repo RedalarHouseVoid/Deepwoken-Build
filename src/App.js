@@ -15,6 +15,9 @@ import {agilityObj,
                 eligibleIntelligence,
                   eligibleStrength} from './talents.js';
 
+
+
+
 let attrLocks = {charisma: false, intelligence: false, willpower: false, strength: false, agility: false, fortitude: false };
 
 function App() {
@@ -41,9 +44,7 @@ function App() {
 
 
   let displayTalents;
-  const alert = () => {
-    window.alert('hey')
-  }
+  
   const Talents = () => {
     
     
@@ -58,11 +59,25 @@ function App() {
       
       let cardText = []
       for(let k = 0; k < eligibleCharisma[i].length; k++) {
+        switch(k) {
+        case 0: cardText.push(<h5 class='TalentName'>{eligibleCharisma[i][k]}</h5>) 
+        break;
+        case 1: cardText.push(<h5 class='TalentRarity'>{eligibleCharisma[i][k]}</h5>) 
+          break;
+        case 2: cardText.push(<h5 class='TalentFamily'>{eligibleCharisma[i][k]}</h5>) 
+          break;
+        case 3: cardText.push(<h5 class='TalentDescription'>{eligibleCharisma[i][k]}</h5>) 
+          break;
+        case 4: cardText.push(<h5 class='TalentStats'>{eligibleCharisma[i][k]}</h5>) 
+        break;
         
-        cardText.push(<h5 class='TalentItem'>{eligibleCharisma[i][k]}</h5>)
+        default:  
+
+        }
+        
       }
       
-      displayTalents.push(<div class='TalentContainer' onClick={alert} >{cardText} </div>)
+      displayTalents.push(<div   class='TalentContainer'  >{cardText} </div>)
   
     }
 
@@ -811,6 +826,7 @@ useEffect(() => {
 
 
        <form>
+      
        <label>{primaryAttunement !== 'none' ? primaryAttunement : 'Primary Attunement'}</label> <br/>
        <input
        
@@ -996,13 +1012,13 @@ useEffect(() => {
 
        
         </div>
-            <div class='col'>
+           
             <div class='Talents'>
             {Talents()}
             </div> 
        
 
-            </div>
+         
       
 
     

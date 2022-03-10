@@ -58,34 +58,71 @@ select:hover {
 
 
 .Talents {
+  
   margin: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   height: 84vh; 
   overflow-y:scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   
 }
-.TalentItem {
-
+.TalentName {
+  color: black;
   font-size: 1vb;
   margin-left: 5px;
+  position: relative;
+  left: 40px;
   
   
   }
+  .TalentRarity {
+    color: black;
+    font-size: 1vb;
+    margin-left: 5px;
+    
+    
+    }
+    .TalentFamily {
+      color: black;
+      font-size: 1vb;
+      margin-left: 5px;
+      
+      
+      }
+      .TalentDescription {
+        color: black;
+        font-size: 1vb;
+        margin-left: 5px;
+        
+        
+        }
+        .TalentStats {
+          color: black;
+          font-size: 1vb;
+          margin-left: 5px;
+          
+          
+          }
  
   .TalentContainer {
-    background-color: rgb(23, 63, 26);
-    border-radius: 7px;
-    border: rgb(0, 0, 0) 2px solid;
+   
+    background: no-repeat  url(./Common.png);
+    background-size: 100%;
+   
     margin:2px;
-    width: auto;
+    width: 11em;
+    
     scroll-snap-align: end;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
   }
   .TalentContainer:hover {
     border-color: white;
+  }
+  .TalentContainer:active{
+    border-color: red;
   }
 .Display {
   
