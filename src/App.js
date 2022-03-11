@@ -56,19 +56,26 @@ function App() {
     requestTalents(agilityValue, charismaValue, fortitudeValue, willpowerValue, intelligenceValue, strengthValue);
     
     for(let i = 0; i < eligibleCharisma.length; i++) {
-      
+      let rarity;
       let cardText = []
+      let stats;
       for(let k = 0; k < eligibleCharisma[i].length; k++) {
         switch(k) {
-        case 0: cardText.push(<h5 class='TalentName'>{eligibleCharisma[i][k]}</h5>) 
+        case 0: if(eligibleCharisma[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleCharisma[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleCharisma[i][k]}</h5>) }
         break;
-        case 1: cardText.push(<h5 class='TalentRarity'>{eligibleCharisma[i][k]}</h5>) 
-          break;
+        case 1: 
+        if(eligibleCharisma[i][k] === 'Common') {rarity = 0}
+        else if(eligibleCharisma[i][k] === 'Rare') {rarity = 1}
+        else if(eligibleCharisma[i][k] === 'Legendary') {rarity = 2}
+
+        break;
         case 2: cardText.push(<h5 class='TalentFamily'>{eligibleCharisma[i][k]}</h5>) 
           break;
-        case 3: cardText.push(<h5 class='TalentDescription'>{eligibleCharisma[i][k]}</h5>) 
+        case 3: if(eligibleCharisma[i][k].length > 150) {
+          cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleCharisma[i][k]}</h5>) 
+        } else {cardText.push(<h5 class='TalentDescription'>{eligibleCharisma[i][k]}</h5>) }
           break;
-        case 4: cardText.push(<h5 class='TalentStats'>{eligibleCharisma[i][k]}</h5>) 
+        case 4: stats = <h5 class='TalentStats'>{eligibleCharisma[i][k]}</h5>
         break;
         
         default:  
@@ -76,67 +83,215 @@ function App() {
         }
         
       }
+      if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+        
+        
+      } else if (rarity === 1) {
+         displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)
+        
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+
+        
+      }
       
-      displayTalents.push(<div   class='TalentContainer'  >{cardText} </div>)
   
     }
 
     for(let i = 0; i < eligibleAgility.length; i++) {
       
       let cardText = []
-      
+      let rarity;
+      let stats;
       for(let k = 0; k < eligibleAgility[i].length; k++) {
        
-          cardText.push(<h5 class='TalentItem'>{eligibleAgility[i][k]}</h5>)
+        switch(k) {
+          case 0: if(eligibleAgility[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleAgility[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleAgility[i][k]}</h5>) }
+          break;
+          case 1: 
+          if(eligibleAgility[i][k] === 'Common') {rarity = 0}
+          else if(eligibleAgility[i][k] === 'Rare') {rarity = 1}
+          else if(eligibleAgility[i][k] === 'Legendary') {rarity = 2}
+  
+          break;
+          case 2: cardText.push(<h5 class='TalentFamily'>{eligibleAgility[i][k]}</h5>) 
+            break;
+          case 3: if(eligibleAgility[i][k].length > 150) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleAgility[i][k]}</h5>) 
+          } else {cardText.push(<h5 class='TalentDescription'>{eligibleAgility[i][k]}</h5>) }
+            break;
+          case 4: stats = <h5 class='TalentStats'>{eligibleAgility[i][k]}</h5>
+          break;
+          
+          default:  
+  
+          }
         
         
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+     if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+      } else if (rarity === 1) {
+        displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)  
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+      }
   
     }
     for(let i = 0; i < eligibleFortitude.length; i++) {
-      
+      let rarity;
       let cardText = []
+      let stats;
       for(let k = 0; k < eligibleFortitude[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleFortitude[i][k]}</h5>)
+        switch(k) {
+          case 0: if(eligibleFortitude[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleFortitude[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleFortitude[i][k]}</h5>) }
+          break;
+          case 1: 
+          if(eligibleFortitude[i][k] === 'Common') {rarity = 0}
+          else if(eligibleFortitude[i][k] === 'Rare') {rarity = 1}
+          else if(eligibleFortitude[i][k] === 'Legendary') {rarity = 2}
+  
+          break;
+          case 2: cardText.push(<h5 class='TalentFamily'>{eligibleFortitude[i][k]}</h5>) 
+            break;
+          case 3: if(eligibleFortitude[i][k].length > 150) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleFortitude[i][k]}</h5>) 
+          } else {cardText.push(<h5 class='TalentDescription'>{eligibleFortitude[i][k]}</h5>) }
+            break;
+          case 4: stats = <h5 class='TalentStats'>{eligibleFortitude[i][k]}</h5>
+          break;
+          
+          default:  
+  
+          }
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+     if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+      } else if (rarity === 1) {
+        displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)  
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+      }
   
     }
     for(let i = 0; i < eligibleWillpower.length; i++) {
-      
+      let rarity;
       let cardText = []
+      let stats;
       for(let k = 0; k < eligibleWillpower[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleWillpower[i][k]}</h5>)
+        switch(k) {
+          case 0: if(eligibleWillpower[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleWillpower[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleWillpower[i][k]}</h5>) }
+          break;
+          case 1: 
+          if(eligibleWillpower[i][k] === 'Common') {rarity = 0}
+          else if(eligibleWillpower[i][k] === 'Rare') {rarity = 1}
+          else if(eligibleWillpower[i][k] === 'Legendary') {rarity = 2}
+  
+          break;
+          case 2: cardText.push(<h5 class='TalentFamily'>{eligibleWillpower[i][k]}</h5>) 
+            break;
+          case 3:  if(eligibleWillpower[i][k].length > 150) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleWillpower[i][k]}</h5>) 
+          } else {cardText.push(<h5 class='TalentDescription'>{eligibleWillpower[i][k]}</h5>) }
+          
+            break;
+          case 4: stats = <h5 class='TalentStats'>{eligibleWillpower[i][k]}</h5>
+          break;
+          
+          default:  
+  
+          }
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+     if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+      } else if (rarity === 1) {
+        displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)  
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+      }
   
     }
     for(let i = 0; i < eligibleIntelligence.length; i++) {
-      
+      let rarity;
       let cardText = []
+      let stats;
       for(let k = 0; k < eligibleIntelligence[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleIntelligence[i][k]}</h5>)
+        switch(k) {
+          case 0: if(eligibleIntelligence[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleIntelligence[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleIntelligence[i][k]}</h5>) }
+          break;
+          case 1: 
+          if(eligibleIntelligence[i][k] === 'Common') {rarity = 0}
+          else if(eligibleIntelligence[i][k] === 'Rare') {rarity = 1}
+          else if(eligibleIntelligence[i][k] === 'Legendary') {rarity = 2}
+  
+          break;
+          case 2: cardText.push(<h5 class='TalentFamily'>{eligibleIntelligence[i][k]}</h5>) 
+            break;
+          case 3: if(eligibleIntelligence[i][k].length > 150) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleIntelligence[i][k]}</h5>) 
+          } else {cardText.push(<h5 class='TalentDescription'>{eligibleIntelligence[i][k]}</h5>) } 
+            break;
+          case 4: stats = <h5 class='TalentStats'>{eligibleIntelligence[i][k]}</h5>
+          break;
+          
+          default:  
+  
+          }
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+     if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+      } else if (rarity === 1) {
+        displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)  
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+      }
   
     }
     for(let i = 0; i < eligibleStrength.length; i++) {
-      
+      let rarity;
       let cardText = []
+      let stats;
       for(let k = 0; k < eligibleStrength[i].length; k++) {
         
-        cardText.push(<h5 class='TalentItem'>{eligibleStrength[i][k]}</h5>)
+        switch(k) {
+          case 0: if(eligibleStrength[i][k].length > 15) {cardText.push(<h5 class='TalentName' style={{'font-size':12, 'top': '8.5%' }}>{eligibleStrength[i][k]}</h5>) } else {cardText.push(<h5 class='TalentName'>{eligibleStrength[i][k]}</h5>) }
+          break;
+          case 1: 
+          if(eligibleStrength[i][k] === 'Common') {rarity = 0}
+          else if(eligibleStrength[i][k] === 'Rare') {rarity = 1}
+          else if(eligibleStrength[i][k] === 'Legendary') {rarity = 2}
+  
+          break;
+          case 2: cardText.push(<h5 class='TalentFamily'>{eligibleStrength[i][k]}</h5>) 
+            break;
+          case 3: if(eligibleStrength[i][k].length > 150) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleStrength[i][k]}</h5>) 
+          } else {cardText.push(<h5 class='TalentDescription'>{eligibleStrength[i][k]}</h5>) } 
+            break;
+          case 4:   stats = <h5 class='TalentStats'>{eligibleStrength[i][k]}</h5>
+          break;
+          
+          default:  
+  
+          }
       }
       
-      displayTalents.push(<div class='TalentContainer'>{cardText} </div>)
+     if(rarity === 0) {
+            displayTalents.push( <div> <div   class='TalentContainerCommon'  >{cardText} </div> {stats} </div>)
+      } else if (rarity === 1) {
+        displayTalents.push(<div> <div   class='TalentContainerRare'  >{cardText} </div> {stats} </div>)  
+        
+      } else if (rarity === 2) {
+        displayTalents.push(<div> <div   class='TalentContainerLegendary'  >{cardText} </div> {stats} </div>)
+      }
   
     }
     return displayTalents
@@ -1016,7 +1171,7 @@ useEffect(() => {
             <div class='Talents'>
             {Talents()}
             </div> 
-       
+           
 
          
       

@@ -61,63 +61,105 @@ select:hover {
   
   margin: 5px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  height: 84vh; 
-  overflow-y:scroll;
+  grid-template-rows: 1fr 1fr;
+  grid-auto-flow: column;
+  height: 86vh; 
+  overflow-x:scroll;
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   
+  
 }
 .TalentName {
-  color: black;
-  font-size: 1vb;
-  margin-left: 5px;
+  color: #3B3424;
+  font-size: 4vb;
   position: relative;
-  left: 40px;
+  top: 8%;
+  
   
   
   }
   .TalentRarity {
     color: black;
-    font-size: 1vb;
-    margin-left: 5px;
+    
+   
     
     
     }
     .TalentFamily {
-      color: black;
-      font-size: 1vb;
-      margin-left: 5px;
+      color: #6C685C;
+      
+      position: relative;
+      top: 41%;
+      
       
       
       }
       .TalentDescription {
-        color: black;
-        font-size: 1vb;
-        margin-left: 5px;
+        color: #2F2C26;
+        inline-size: 79%; 
+        left: 10%;
+        position: relative;
         
+        top: 36%;
+        overflow: hidden;
         
         }
         .TalentStats {
-          color: black;
-          font-size: 1vb;
-          margin-left: 5px;
+          color: #E6E2D0;
+          text-shadow: 0 0 10px #000000;
+          position: relative;
+          text-align: center;
+          bottom: 17%;
+          
+          
+          
+          
           
           
           }
  
-  .TalentContainer {
-   
+  
+  .TalentContainerCommon {
+    text-align: center;
     background: no-repeat  url(./Common.png);
     background-size: 100%;
-   
+    height: 100%;
     margin:2px;
-    width: 11em;
+    width: 15em;
     
     scroll-snap-align: end;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+    
 
   }
+  .TalentContainerRare {
+    text-align: center;
+    height: 100%;
+    background: no-repeat  url(./Rare.png);
+    background-size: 100%;
+    font-size: 1vb;
+    margin:2px;
+    width: 15em;
+    
+    scroll-snap-align: end;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+
+  }
+  .TalentContainerLegendary {
+    text-align: center;
+    height: 100%;
+    background: no-repeat  url(./Legendary.png);
+    background-size: 100%;
+    font-size: 1vb;
+    margin:2px;
+    width: 15em;
+    
+    scroll-snap-align: end;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+
+  }
+ 
   .TalentContainer:hover {
     border-color: white;
   }
