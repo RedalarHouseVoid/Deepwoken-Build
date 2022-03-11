@@ -71,9 +71,10 @@ function App() {
         break;
         case 2: cardText.push(<h5 class='TalentFamily'>{eligibleCharisma[i][k]}</h5>) 
           break;
-        case 3: if(eligibleCharisma[i][k].length > 150) {
-          cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleCharisma[i][k]}</h5>) 
-        } else {cardText.push(<h5 class='TalentDescription'>{eligibleCharisma[i][k]}</h5>) }
+        case 3:if(eligibleCharisma[i][k].length > 100) {
+          cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleCharisma[i][k]}</h5>) 
+        } else if (eligibleCharisma[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleCharisma[i][k]}</h5>) }
+        else {cardText.push(<h5 class='TalentDescription'>{eligibleCharisma[i][k]}</h5>) }
           break;
         case 4: stats = <h5 class='TalentStats'>{eligibleCharisma[i][k]}</h5>
         break;
@@ -117,9 +118,10 @@ function App() {
           break;
           case 2: cardText.push(<h5 class='TalentFamily'>{eligibleAgility[i][k]}</h5>) 
             break;
-          case 3: if(eligibleAgility[i][k].length > 150) {
-            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleAgility[i][k]}</h5>) 
-          } else {cardText.push(<h5 class='TalentDescription'>{eligibleAgility[i][k]}</h5>) }
+          case 3: if(eligibleAgility[i][k].length > 100) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleAgility[i][k]}</h5>) 
+          } else if (eligibleAgility[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleAgility[i][k]}</h5>) }
+          else {cardText.push(<h5 class='TalentDescription'>{eligibleAgility[i][k]}</h5>) }
             break;
           case 4: stats = <h5 class='TalentStats'>{eligibleAgility[i][k]}</h5>
           break;
@@ -157,9 +159,10 @@ function App() {
           break;
           case 2: cardText.push(<h5 class='TalentFamily'>{eligibleFortitude[i][k]}</h5>) 
             break;
-          case 3: if(eligibleFortitude[i][k].length > 150) {
-            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleFortitude[i][k]}</h5>) 
-          } else {cardText.push(<h5 class='TalentDescription'>{eligibleFortitude[i][k]}</h5>) }
+          case 3: if(eligibleFortitude[i][k].length > 100) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleFortitude[i][k]}</h5>) 
+          } else if (eligibleFortitude[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleFortitude[i][k]}</h5>) }
+          else {cardText.push(<h5 class='TalentDescription'>{eligibleFortitude[i][k]}</h5>) }
             break;
           case 4: stats = <h5 class='TalentStats'>{eligibleFortitude[i][k]}</h5>
           break;
@@ -195,9 +198,10 @@ function App() {
           break;
           case 2: cardText.push(<h5 class='TalentFamily'>{eligibleWillpower[i][k]}</h5>) 
             break;
-          case 3:  if(eligibleWillpower[i][k].length > 150) {
-            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleWillpower[i][k]}</h5>) 
-          } else {cardText.push(<h5 class='TalentDescription'>{eligibleWillpower[i][k]}</h5>) }
+          case 3:  if(eligibleWillpower[i][k].length > 100) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleWillpower[i][k]}</h5>) 
+          } else if (eligibleWillpower[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleWillpower[i][k]}</h5>) }
+          else {cardText.push(<h5 class='TalentDescription'>{eligibleWillpower[i][k]}</h5>) }
           
             break;
           case 4: stats = <h5 class='TalentStats'>{eligibleWillpower[i][k]}</h5>
@@ -234,9 +238,10 @@ function App() {
           break;
           case 2: cardText.push(<h5 class='TalentFamily'>{eligibleIntelligence[i][k]}</h5>) 
             break;
-          case 3: if(eligibleIntelligence[i][k].length > 150) {
-            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleIntelligence[i][k]}</h5>) 
-          } else {cardText.push(<h5 class='TalentDescription'>{eligibleIntelligence[i][k]}</h5>) } 
+          case 3: if(eligibleIntelligence[i][k].length > 100) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleIntelligence[i][k]}</h5>) 
+          } else if (eligibleIntelligence[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleIntelligence[i][k]}</h5>) }
+          else {cardText.push(<h5 class='TalentDescription'>{eligibleIntelligence[i][k]}</h5>) }
             break;
           case 4: stats = <h5 class='TalentStats'>{eligibleIntelligence[i][k]}</h5>
           break;
@@ -272,9 +277,10 @@ function App() {
           break;
           case 2: cardText.push(<h5 class='TalentFamily'>{eligibleStrength[i][k]}</h5>) 
             break;
-          case 3: if(eligibleStrength[i][k].length > 150) {
-            cardText.push(<h5 class='TalentDescription' style={{'font-size':12}}>{eligibleStrength[i][k]}</h5>) 
-          } else {cardText.push(<h5 class='TalentDescription'>{eligibleStrength[i][k]}</h5>) } 
+          case 3:  if(eligibleStrength[i][k].length > 100) {
+            cardText.push(<h5 class='TalentDescription' style={{'font-size':12, 'top': '39%'}}>{eligibleStrength[i][k]}</h5>) 
+          } else if (eligibleStrength[i][k].length < 38) {cardText.push(<h5 class='TalentDescription' style={{'top': '42.5%'}}>{eligibleStrength[i][k]}</h5>) }
+          else {cardText.push(<h5 class='TalentDescription'>{eligibleStrength[i][k]}</h5>) }
             break;
           case 4:   stats = <h5 class='TalentStats'>{eligibleStrength[i][k]}</h5>
           break;
