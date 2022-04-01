@@ -2,7 +2,7 @@
 @font-face {font-family: "MikadanW00-Regular"; src: url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.eot"); src: url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.woff") format("woff"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/b6cb548dfee027bf5b20513298758190.svg#MikadanW00-Regular") format("svg"); }
 .coreAttributes {
   width: 100%;
-  
+  height: 100%;
   
   
 }
@@ -55,7 +55,9 @@ select:hover {
   
 
 }
-
+.Race {
+  margin-top: 5px;
+}
 
 .Talents {
   
@@ -70,6 +72,21 @@ select:hover {
   
   
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: green;
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(23, 63, 26);
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 5px;
+}
+
+
 .TalentName {
   color: #3B3424;
   font-size: 4vb;

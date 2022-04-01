@@ -821,7 +821,7 @@ useEffect(() => {
 
         
         <div class='coreAttributes'> 
-        <div class='select attr'> 
+        <div class='attr'> 
         <form>
         <label>Race</label> <br/>
         <select class='Race'
