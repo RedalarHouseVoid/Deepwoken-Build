@@ -1116,7 +1116,7 @@ useEffect(() => {
 
         <div class='points'>
       <p>   Remaining Points: {
-            (levelValue * 5 + 25 )
+            (levelValue * 5 + 27 )
              - (Number(lightWeaponValue)
               + Number(mediumWeaponValue)
                + Number(heavyWeaponValue)
