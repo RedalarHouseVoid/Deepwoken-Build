@@ -524,7 +524,7 @@ function attrChange(a, attr) {
   const numRegex = '^[0-9]*$'
   switch (attr) {
     case 'charisma':
-      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -546,7 +546,7 @@ function attrChange(a, attr) {
       }
       break;
     case 'intelligence':
-      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -567,7 +567,7 @@ function attrChange(a, attr) {
       }
       break;
     case 'willpower':
-      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -588,7 +588,7 @@ function attrChange(a, attr) {
       }
       break;
     case 'strength':
-      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -609,7 +609,7 @@ function attrChange(a, attr) {
       }
       break;
     case 'agility':
-      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -630,7 +630,7 @@ function attrChange(a, attr) {
       }
       break;
     case 'fortitude':
-      if(a.target.value.match(numRegex) && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex) && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -651,7 +651,7 @@ function attrChange(a, attr) {
       }
       break;
       case 'primary attunement':
-      if(a.target.value.match(numRegex) && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex) && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -672,7 +672,7 @@ function attrChange(a, attr) {
       }
       break;
       case 'secondary attunement':
-        if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+        if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
         - (Number(lightWeaponValue)
          + Number(mediumWeaponValue)
           + Number(heavyWeaponValue)
@@ -693,7 +693,7 @@ function attrChange(a, attr) {
         }
         break;
         case 'tertiary attunement':
-          if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+          if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
           - (Number(lightWeaponValue)
            + Number(mediumWeaponValue)
             + Number(heavyWeaponValue)
@@ -714,7 +714,7 @@ function attrChange(a, attr) {
           }
           break;
       case 'light weapon':
-      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
       - (Number(a.target.value)
        + Number(mediumWeaponValue)
         + Number(heavyWeaponValue)
@@ -735,7 +735,7 @@ function attrChange(a, attr) {
       }
       break;
       case 'medium weapon':
-      if(a.target.value.match(numRegex)   && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)   && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(a.target.value)
         + Number(heavyWeaponValue)
@@ -756,7 +756,7 @@ function attrChange(a, attr) {
       }
       break;
       case 'heavy weapon':
-      if(a.target.value.match(numRegex)  && (levelValue * 5 + 25 )
+      if(a.target.value.match(numRegex)  && (levelValue * 5 + 27 )
       - (Number(lightWeaponValue)
        + Number(mediumWeaponValue)
         + Number(a.target.value)
